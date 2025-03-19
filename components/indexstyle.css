@@ -1,0 +1,94 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+
+*{
+    user-select: none;
+}
+
+body {
+    font-family: "Roboto", sans-serif;
+    background: url('images/Wallpaper.jpg') no-repeat center center fixed;
+    background-size: cover;
+}
+
+.logo{
+    width: 350px;
+    height: 350px;
+}
+
+.container p{
+    color: black;
+    background: rgba(255, 255, 255, 0.7);
+    width: auto;
+    height: auto;
+    transition: 0.8s;
+}
+
+.container p:hover{
+    background: rgba(255, 255, 255, 1);
+}
+
+.container h3{
+    color: white;
+    text-shadow: 0 0 3px #ff9090;
+}
+
+.download, .changelog, .git{
+    background-color: #ffffff;
+    color: black;
+    padding: 1rem;
+    width: 10rem;
+}
+
+.download:hover, .changelog:hover, .git:hover{
+    border: 1px groove white;
+}
+
+.download:hover i, .changelog:hover i, .git:hover i {
+    color: white !important;
+}
+
+.baixar{
+    padding: 14px;
+    width: 10rem;
+    display: inline-block;
+    margin: 0 auto;
+}
+
+#titulo {
+    text-align: center;
+    padding: 10px;
+}
+
+#titulo img {
+    display: block;
+    margin: 0 auto 10px;
+    width: 50px;
+    height: 50px;
+    border-radius: 6px;
+}
+
+.card-body {
+    text-align: center;
+}
+
+.modal-changelog{
+    width: 900px;
+}
+
+.fade-in {
+    animation: fadeIn 1s ease-in-out;
+}
+
+.removidos{
+    display: flex;
+    justify-content: space-between;
+}
+
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}

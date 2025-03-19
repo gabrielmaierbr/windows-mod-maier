@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Windows Mod Maier</title>
+    <link rel="shortcut icon" href="components/images/Logo.png" type="image/x-icon">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link rel="stylesheet" href="components/indexstyle.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+</head>
+<body>
+    <div class="container text-center mt-5 fade-element">
+        <img src="components/images/Logo.png" alt="Logo" class="mb-3 mt-5 shadow-lg rounded logo">
+        <h3 class="mt-5">Windows MOD Lite</h3>
+        <p class="border p-3 rounded-4 mt-5">
+            Windows modificado a partir de NTLite, removendo recursos desnecessários (Bloatwares) instalados de fábrica pela Microsoft.<br>
+            Não está incluso nenhuma forma de ativação ilegal, nenhum Aplicativo/Programa necessário para funcionamento do sistema a nível crítico foi removido.<br>
+        </p>
+        <div class="mt-5 d-flex gap-5 justify-content-center">
+            <button class="btn btn-danger download" data-bs-toggle="modal" data-bs-target="#downloadModal">
+                <i class="fa-solid fa-download me-2" style="color: #cb0000;"></i> Download
+            </button>
+            <button class="btn btn-danger changelog" data-bs-toggle="modal" data-bs-target="#changelogModal">
+                <i class="fa-solid fa-file me-2" style="color: #cb0000;"></i> Changelog
+            </button>
+            <button class="btn btn-danger git">
+                <i class="fa-brands fa-github me-2" style="color: #cb0000;"></i> GitHub
+            </button>
+        </div>
+    </div>
+
+    <div class="modal fade" id="downloadModal" tabindex="-1" aria-labelledby="modalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered modal-lg">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="modalLabel">Links disponíveis</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <div class="cards-container d-flex justify-content-between gap-3">
+                        <div class="card" style="width: 24rem;">
+                            <div class="card-body">
+                                <div id="titulo">
+                                    <img src="components/images/Logo.png" class="card-img-top logodown" alt="...">
+                                    <h5 class="card-title">Windows 11 24H2</h5>
+                                </div>
+                                <a href="https://drive.google.com/file/d/1yJdWDMMAtYhYTqv_6kYQ7IkL0lQNlcol/view?usp=drive_link" target="_blank" class="btn btn-danger download baixar">Baixar</a>
+                            </div>
+                        </div>
+                        <div class="card" style="width: 24rem;">
+                            <div class="card-body">
+                                <div id="titulo">
+                                    <img src="components/images/Logo.png" class="card-img-top logodown" alt="...">
+                                    <h5 class="card-title">Windows 11 24H2 Sem TPM 2.0</h5>
+                                </div>
+                                <a href="https://drive.google.com/file/d/1FBRJ3jrsxmS-LJcNnNrlZVg36TJTeSrt/view?usp=drive_link" target="_blank" class="btn btn-danger download baixar">Baixar</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <div class="modal fade" id="changelogModal" tabindex="-1" aria-labelledby="changelogModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered" style="max-width: 44%; margin: auto;">
+            <div class="modal-content" style="max-height: 75vh; min-height: 75vh; overflow-y: auto; border-radius: 12px; box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1); transition: all 0.3s ease;">
+                <div class="modal-header" style="border-bottom: 2px solid #dee2e6;">
+                    <h5 class="modal-title" id="changelogModalLabel">Changelog</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body" style="padding: 20px; background-color: #f9f9f9;">
+                    <ul class="nav nav-tabs" id="changelogTabs" role="tablist" style="border-bottom: 2px solid #dee2e6;">
+                        <li class="nav-item" role="presentation">
+                            <a class="nav-link active" id="tab-modifications" data-bs-toggle="tab" href="#modifications" role="tab" aria-controls="modifications" aria-selected="true">Modificações da ISO</a>
+                        </li>
+                        <li class="nav-item" role="presentation">
+                            <a class="nav-link" id="tab-removed-system" data-bs-toggle="tab" href="#removedsystem" role="tab" aria-controls="removedsystem" aria-selected="false">Apps de sistema removidos</a>
+                        </li>
+                        <li class="nav-item" role="presentation">
+                            <a class="nav-link" id="tab-removed-apps" data-bs-toggle="tab" href="#removedapps" role="tab" aria-controls="removedapps" aria-selected="false">Apps de loja removidos</a>
+                        </li>
+                        <li class="nav-item" role="presentation">
+                            <a class="nav-link" id="tab-resources" data-bs-toggle="tab" href="#resources" role="tab" aria-controls="resources" aria-selected="false">Recursos ativados</a>
+                        </li>
+                        <li class="nav-item" role="presentation">
+                            <a class="nav-link" id="tab-settings" data-bs-toggle="tab" href="#settings" role="tab" aria-controls="settings" aria-selected="false">Configurações</a>
+                        </li>
+                        <li class="nav-item" role="presentation">
+                            <a class="nav-link" id="tab-privacy" data-bs-toggle="tab" href="#privacy" role="tab" aria-controls="privacy" aria-selected="false">Privacidade</a>
+                        </li>
+                    </ul>
+        
+                    <div class="tab-content mt-3" id="changelogTabsContent" style="padding-top: 10px;">
+                        <div class="tab-pane fade show active" id="modifications" role="tabpanel" aria-labelledby="tab-modifications">
+                            <p>
+                                - Removidas todas as opções de versões do Windows, apenas a Pro é instalável.<br>
+                                - Instalação sem conta Microsoft, apenas conta Local, se quiser, faça login depois pelas configurações.<br>
+                                - Updates pré-instaladas para início rápido do sistema.
+                            </p>
+                        </div>
+                        <div class="tab-pane fade" id="removedsystem" role="tabpanel" aria-labelledby="tab-removed-system">
+                            <p>
+                                - Windows Hello<br>
+                                - Controle com os Olhos (Eye Tracking)<br>
+                                - Fazer um Teste (app com propagandas)<br>
+                                - Ferramenta de Captura<br>
+                                - Controle Parental<br>
+                                - Narrador<br><br>
+                            </p>
+                        </div>
+                        <div class="tab-pane fade" id="removedapps" role="tabpanel" aria-labelledby="tab-removed-apps">
+                            <p>
+                                - Clipchamp<br>
+                                - DevHome<br>
+                                - Feedback<br>
+                                - Get Help<br>
+                                - Microsoft Office 365<br>
+                                - Bing Search<br>
+                                - Notícias<br>
+                                - Notas Autoadesivas<br>
+                                - Teams<br>
+                                - Microsoft To Do<br>
+                                - Clima MSN<br>
+                                - Outlook<br>
+                                - Phone Link<br>
+                                - Power Automate<br>
+                                - Solitaire (jogo de carta)<br>
+                                - Camera App<br>
+                                - Alarme / Relógio App<br>
+                                - Gravador de Voz<br>
+                            </p>
+                        </div>
+                        <div class="tab-pane fade" id="resources" role="tabpanel" aria-labelledby="tab-resources">
+                            <p>
+                                - DirectPlay<br>
+                                - SMB 1.0 Client<br>
+                            </p>
+                        </div>
+                        <div class="tab-pane fade" id="settings" role="tabpanel" aria-labelledby="tab-settings">
+                            <p>
+                                - UAC ativo porém sem pedir permissão ADM para abrir programas<br>
+                                - Inicialização Rápida desligada<br>
+                                - Tela Azul não reinicia automaticamente o PC, bom para anotar erros a tempo<br>
+                                - Explorador de Arquivos abre Meu Computador ao invés de Acesso Rápido<br>
+                                - Acesso Rápido desativado<br>
+                                - Botão Visualizar Tarefas removido<br>
+                                - Visualizador Clássico de Imagens do Windows ativado (escolher manualmente na hora de abrir imagens)<br>
+                                - Menu Iniciar -> Apps iniciados com frequência + Adicionados recentemente desativados<br>
+                                - Pastas e opções extras perto do botão de desligar no Menu Iniciar<br>
+                                - Sem histórico de pesquisa no Explorador de Arquivos<br>
+                                - Desativado pesquisa de Feedback do Windows<br>
+                                - App de configurações não deve mais dar sugestões na tela inicial<br>
+                                - Sugestões do Menu Iniciar desativadas<br>
+                                - Proibida ação da Microsoft de experimentar Apps com o usuário<br>
+                                - Pesquisa no Menu Iniciar vai ignorar qualquer resultado da internet (pesquisa Bing) e Nuvem (OneDrive)<br>
+                                - Controle não abre mais Xbox Game Bar pelo botão Home<br>
+                                - BitLocker não ativa mais automaticamente ao sistema conferir com os requisitos para tal<br>
+                                - Teclas de Aderência desativadas<br>
+                                - Windows Update apenas atualiza Driver caso ele não esteja instalado<br>
+                                - Barra de Tarefas por padrão no lado Esquerdo ao invés de Centro<br>
+                                - Widgets da Barra de Tarefas desativado<br>
+                                - Menu de contexto (clique direito do mouse no Desktop) clássico do Windows 10 ativado<br>
+                                - Windows no modo escuro, porém aplicativos no modo claro (alterável dentro do sistema)<br>
+                                - Aprimorar Precisão do Ponteiro do Mouse desativado de fábrica<br>
+                                - Barra de pesquisa na Barra de Tarefas oculta de fábrica<br><br>
+                            </p>
+                        </div>
+                        <div class="tab-pane fade" id="privacy" role="tabpanel" aria-labelledby="tab-privacy">
+                            <p>
+                                - Apps OEM pré-instalados desativados.<br>
+                                - Apps patrocinados pré-instalados desativados.<br>
+                                - Desativar a instalação automática de apps sugeridos.<br>
+                                - Desativada toda coleta de dados Microsoft e Cortana.<br>
+                                - Telemetria desativada.<br>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+    <script src="components/indexscript.js"></script>
+</body>
+</html>
